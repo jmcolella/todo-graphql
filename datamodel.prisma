@@ -1,0 +1,18 @@
+type User {
+  id: ID! @id
+  name: String
+  email: String @unique
+  password: String
+  todos: [Todo!] @relation(onDelete: CASCADE)
+  createdAt: DateTime! @createdAt
+  updatedAt: DateTime! @updatedAt
+}
+
+type Todo {
+  id: ID! @id
+  body: String!
+  completed: Boolean! @default(value: false)
+  user: User!
+  createdAt: DateTime! @createdAt
+  updatedAt: DateTime! @updatedAt
+}

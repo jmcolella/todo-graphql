@@ -1,0 +1,34 @@
+{
+  "name": "todo-graphql",
+  "version": "0.0.1",
+  "description": "Generic Graphql backend for a todo application",
+  "main": "./server/index.js",
+  "author": "John Colella <colella.john@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start:dev": "nodemon ./server/index.js",
+    "lint": "eslint ./server --ignore-pattern server/db/generated/**"
+  },
+  "dependencies": {
+    "apollo-server-express": "^2.9.12",
+    "bcrypt": "^3.0.7",
+    "connect-redis": "^4.0.3",
+    "cookie-parser": "^1.4.4",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "graphql": "^14.5.8",
+    "jsonwebtoken": "^8.5.1",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0",
+    "prisma": "^1.34.10",
+    "redis": "^2.8.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.7.0",
+    "eslint-config-policygenius": "^0.2.1",
+    "nodemon": "^2.0.1"
+  }
+}
